@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;/* con questa proprietà possiamo definire l'altezza e lunghezza dell'intero box, non sono del contenuto*/
+}
+html{
+  background-color: #fff;
+  color: #555;
+  font-family: 'Karla', 'Arial',sans-serif; /* se non si ha la connessione internet si visualizzerà il font Arial, se il font arial non è presente sul pc verrà visualizzato  il sans-serif*/
+  font-size: 18px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility; /* viene sceltà la qualità del font rispetto alla velocità*/
+}
+.row{
+  max-width: 1140px; /* l'unico parametro definito come larghezza assoluta*/
+  margin: 0 auto;
+}
+header{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) ), url(img/hero.jpg); /* linear gradient mi setta un colore sopra l'immagine in modo da far notare meglio la scritta sopra l'immagine. Ha bisogno di 2 colori, e parte dall'alto verso il basso*/
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+h1{
+  margin: 0;
+  color: #fff;
+}
+.hero-text-box{
+  position: absolute; /* serve per centrarla verticalemnte e orizzontalmente*/
+  width: 1140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* trasla il div metà della sua larghezza e della sua altezza in su e a sinistra*/
+}
