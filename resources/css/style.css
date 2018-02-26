@@ -22,8 +22,14 @@ header{
   height: 100vh;
 }
 h1{
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 20px;
   color: #fff;
+  font-size: 250%; /*utile per il responsive design, voglio che sia 200% rispetto al font impostato nel tag html. Lavoreremo quindi solo sul font globale nel caso in cui volessimo vare dei cmabiamenti*/
+  font-weight: 300; /* di solito il tag h1 ha il bold predefinito*/
+  text-transform: uppercase; /* mi fa tutta la stringa maiscola*/
+  letter-spacing: 1px;
+  word-spacing: 4px;
 }
 .hero-text-box{
   position: absolute; /* serve per centrarla verticalemnte e orizzontalmente*/
@@ -32,3 +38,46 @@ h1{
   left: 50%;
   transform: translate(-50%, -50%); /* trasla il div metà della sua larghezza e della sua altezza in su e a sinistra*/
 }
+.btn:link,
+.btn:visited{ /*stile comune dei 2 bottoni*/
+  display: inline-block;/* in modo da poterli dare le proprietà margin e padding*/
+  padding: 10px 30px;
+  font-weight: 300;
+  text-decoration: none;
+  border-radius: 200px; /* in modo che mi faccia i bordi del bottone rotondi*/
+  transition: background-color 0.2, border 0.2, color 0.2;/*proprietà del css 3. c'è la transizione da un colore ad un altro. In pratica quando passo il mouse sopra un link il colore non cambia instantaneamente ma in un periodo di 0.2 ms*/
+}
+.btn-full:link,
+.btn-full:visited{
+  background-color: #e67e22;
+  border: 1px solid #e67e22;
+  color: #fff;
+  margin-right: 15px;
+}
+.btn-ghost:link,
+.btn-ghost:visited{
+  border: 1px solid #e67e22;
+  color: #e67e22;
+}
+
+.btn:hover,
+.btn-active {
+  background-color: #cf6d17;
+}
+/*NOTA: bottoni o link in generale in css possono avere diversi stati:
+1. link (come l'elemento appare di default), la specifico con le pseudo-classi.
+btn:link{ }
+2. visited (come l'elemento deve apparire dove che il link è stato visitato)
+btn:visited{ }
+ 3. active (quando clicco sul elemento)
+
+ 4. hover (quando passiamo col mouse sopra l'elemento )*/
+ .btn-full:hover,
+ .btn-full:active{
+   border: 1px solid #cf6d17;
+ }
+ .btn-ghost:hover,
+ .btn:active{
+   border: 1px solid #e67e22;
+   color: #fff;
+ }
