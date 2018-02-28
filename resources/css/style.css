@@ -1,3 +1,6 @@
+/*-------------------------------------------------------------------------*/
+/*BASIC SETUP*/
+/*-------------------------------------------------------------------------*/
 * {
   margin: 0;
   padding: 0;
@@ -11,16 +14,18 @@ html{
   font-weight: 400;
   text-rendering: optimizeLegibility; /* viene sceltà la qualità del font rispetto alla velocità*/
 }
+
+/*-------------------------------------------------------------------------*/
+/*REUSABLE COMPONENTS*/
+/*-------------------------------------------------------------------------*/
+
 .row{
   max-width: 1140px; /* l'unico parametro definito come larghezza assoluta*/
   margin: 0 auto;
 }
-header{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) ), url(img/hero.jpg); /* linear gradient mi setta un colore sopra l'immagine in modo da far notare meglio la scritta sopra l'immagine. Ha bisogno di 2 colori, e parte dall'alto verso il basso*/
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
+/*-------------------------------------------------------------------------*/
+/*HEADINGS*/
+/*-------------------------------------------------------------------------*/
 h1{
   margin-top: 0;
   margin-bottom: 20px;
@@ -31,13 +36,10 @@ h1{
   letter-spacing: 1px;
   word-spacing: 4px;
 }
-.hero-text-box{
-  position: absolute; /* serve per centrarla verticalemnte e orizzontalmente*/
-  width: 1140px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* trasla il div metà della sua larghezza e della sua altezza in su e a sinistra*/
-}
+
+/*-------------------------------------------------------------------------*/
+/*BUTTONS*/
+/*-------------------------------------------------------------------------*/
 .btn:link,
 .btn:visited{ /*stile comune dei 2 bottoni*/
   display: inline-block;/* in modo da poterli dare le proprietà margin e padding*/
@@ -81,3 +83,49 @@ btn:visited{ }
    border: 1px solid #e67e22;
    color: #fff;
  }
+ /*-------------------------------------------------------------------------*/
+ /*HEADER*/
+ /*-------------------------------------------------------------------------*/
+
+ header{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7) ), url(img/hero.jpg); /* linear gradient mi setta un colore sopra l'immagine in modo da far notare meglio la scritta sopra l'immagine. Ha bisogno di 2 colori, e parte dall'alto verso il basso*/
+   background-size: cover;
+   background-position: center;
+   height: 100vh;
+ }
+ .hero-text-box{
+   position: absolute; /* serve per centrarla verticalemnte e orizzontalmente*/
+   width: 1140px;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); /* trasla il div metà della sua larghezza e della sua altezza in su e a sinistra*/
+ }
+ .logo{
+   height: 100px;
+   width: auto;
+   float: left;
+   margin-top: 20px;
+ }
+.main-nav{
+  float: right;
+  /*siccome è un ul devo sbarazzarmi del punto*/
+  list-style: none;
+  margin-top: 55px;
+}
+.main-nav li{
+  /*devo cambiare il modo in cui sono visualizzati. Prima erano block element adesso voglio che siano inline-block in modo che occupi solo lo spazio del contenuto */
+  display: inline-block;
+  margin-left: 40px;
+}
+.main-nav li a:link,
+.main-nav li a:visited {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%; /* in html ho definito il font size 20 px, la dimensione del  font non va mai cambiata, devo solo lavorare con le percentuali rispetto a quella dimensione di default*/
+  border-bottom:  2px solid  transparent;
+}
+.main-nav li a:hover,
+.main-nav li a:active{
+  border-bottom:  2px solid  #e67e22;
+}
