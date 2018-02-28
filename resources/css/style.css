@@ -23,18 +23,39 @@ html{
   max-width: 1140px; /* l'unico parametro definito come larghezza assoluta*/
   margin: 0 auto;
 }
+section{
+  padding: 80px 0;
+}
 /*-------------------------------------------------------------------------*/
 /*HEADINGS*/
 /*-------------------------------------------------------------------------*/
+h1,h2{
+  font-weight: 300; /* di solito il tag h1 ha il bold predefinito*/
+  text-transform: uppercase; /* mi fa tutta la stringa maiscola*/
+  letter-spacing: 1px;
+}
 h1{
   margin-top: 0;
   margin-bottom: 20px;
   color: #fff;
   font-size: 250%; /*utile per il responsive design, voglio che sia 200% rispetto al font impostato nel tag html. Lavoreremo quindi solo sul font globale nel caso in cui volessimo vare dei cmabiamenti*/
-  font-weight: 300; /* di solito il tag h1 ha il bold predefinito*/
-  text-transform: uppercase; /* mi fa tutta la stringa maiscola*/
-  letter-spacing: 1px;
   word-spacing: 4px;
+}
+h2{
+font-size: 180%;
+word-spacing: 2px;
+text-align: center;
+margin-bottom: 30px;
+}
+h2::after{
+  display: block;
+  height: 2px;
+  background-color: #e67e22;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+
+  margin-top: 30px;
 }
 
 /*-------------------------------------------------------------------------*/
