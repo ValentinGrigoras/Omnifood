@@ -26,13 +26,15 @@ html{
 section{
   padding: 80px 0;
 }
+.box{
+  padding: 1%;
+}
 /*-------------------------------------------------------------------------*/
 /*HEADINGS*/
 /*-------------------------------------------------------------------------*/
-h1,h2{
+h1,h2,h3{
   font-weight: 300; /* di solito il tag h1 ha il bold predefinito*/
   text-transform: uppercase; /* mi fa tutta la stringa maiscola*/
-  letter-spacing: 1px;
 }
 h1{
   margin-top: 0;
@@ -40,12 +42,18 @@ h1{
   color: #fff;
   font-size: 250%; /*utile per il responsive design, voglio che sia 200% rispetto al font impostato nel tag html. Lavoreremo quindi solo sul font globale nel caso in cui volessimo vare dei cmabiamenti*/
   word-spacing: 4px;
+  letter-spacing: 1px;
 }
 h2{
 font-size: 180%;
 word-spacing: 2px;
 text-align: center;
 margin-bottom: 30px;
+letter-spacing: 1px;
+}
+h3{
+font-size: 110%;
+margin-bottom: 15px;
 }
 h2::after{
   display: block;
@@ -54,10 +62,27 @@ h2::after{
   content: " ";
   width: 100px;
   margin: 0 auto;
-
   margin-top: 30px;
 }
 
+/*-----PARAGRAPHS------*/
+.long-copy{
+  line-height: 145%; /* usare una percentuale tra 120 e 145*/
+  width: 70%; /*facendo cosi non sarà più centrato.Però posso distribuire il rimanente 30% in 15% margin left e 15% margin right*/
+margin-left: 15%;
+}
+.box p{
+  font-size: 90%;
+  line-height: 145%;
+}
+/*-----ICONS------*/
+.icon-big{
+  font-size: 350%; /* siccome le icone sono dei font, posso ingrandirle attraverso questa proprietà*/
+  display: block;
+  color: #e67e22;
+  margin-bottom: 10px;
+
+}
 /*-------------------------------------------------------------------------*/
 /*BUTTONS*/
 /*-------------------------------------------------------------------------*/
